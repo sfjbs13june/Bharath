@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class StudentController {
 
     @GetMapping("/getstudent")
-
     public String getstudentDetails() {
         return "student1";
     }

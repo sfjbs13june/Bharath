@@ -1,4 +1,4 @@
-package com.Bharath.app.config;
+package com.bharath.app.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -13,8 +13,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.httpBasic().and().authorizeRequests()
                 .antMatchers(HttpMethod.GET, "/getstudent").hasAnyRole("USER")
-                .antMatchers(HttpMethod.GET, "/updatestudent").hasAnyRole("ADMIN")
-                .antMatchers(HttpMethod.GET, "/deletestudent").hasAnyRole("ADMIN")
+                .antMatchers(HttpMethod.PUT, "/updatestudent").hasAnyRole("ADMIN")
+                .antMatchers(HttpMethod.DELETE, "/deletestudent").hasAnyRole("ADMIN")
                 .and().csrf().disable().headers()
                 .frameOptions().disable();
     }

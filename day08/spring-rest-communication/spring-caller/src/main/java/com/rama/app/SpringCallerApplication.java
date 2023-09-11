@@ -1,13 +1,13 @@
-package com.bharath.app;
+package com.rama.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class StudentAppApplication {
+public class SpringCallerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(StudentAppApplication.class, args);
+		SpringApplication.run(SpringCallerApplication.class, args);
 	}
 
 }
